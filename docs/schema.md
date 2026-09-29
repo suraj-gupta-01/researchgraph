@@ -1,4 +1,4 @@
-# Schema walkthrough (PRD M6 / Section 10.1)
+# Schema walkthrough
 
 The evaluator-facing companion to `database/schema.sql` and
 `database/migrations/02..06`: the ER diagram, why every table is shaped the
