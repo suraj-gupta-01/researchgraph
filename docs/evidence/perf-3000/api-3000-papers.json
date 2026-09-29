@@ -1,0 +1,210 @@
+[
+ {
+  "endpoint": "F1 search overview",
+  "path": "/search/overview",
+  "first_ms": 116.6,
+  "median_ms": 106.9,
+  "p95_ms": 116.6,
+  "bytes": 3844
+ },
+ {
+  "endpoint": "F1 search papers (relevance)",
+  "path": "/search/papers",
+  "first_ms": 83.2,
+  "median_ms": 76.7,
+  "p95_ms": 83.2,
+  "bytes": 8181
+ },
+ {
+  "endpoint": "F1 search papers (citations)",
+  "path": "/search/papers",
+  "first_ms": 74.3,
+  "median_ms": 62.5,
+  "p95_ms": 74.3,
+  "bytes": 8187
+ },
+ {
+  "endpoint": "F1/F6 citation network",
+  "path": "/search/citation-network",
+  "first_ms": 106.9,
+  "median_ms": 74.8,
+  "p95_ms": 106.9,
+  "bytes": 92026
+ },
+ {
+  "endpoint": "paper page",
+  "path": "/papers/42",
+  "first_ms": 31.7,
+  "median_ms": 7.2,
+  "p95_ms": 31.7,
+  "bytes": 2848
+ },
+ {
+  "endpoint": "paper cited-by",
+  "path": "/papers/42/citations",
+  "first_ms": 32.7,
+  "median_ms": 10.5,
+  "p95_ms": 32.7,
+  "bytes": 2370
+ },
+ {
+  "endpoint": "recursive citation chain d=5",
+  "path": "/papers/42/citation-chain",
+  "first_ms": 34.7,
+  "median_ms": 30.5,
+  "p95_ms": 34.7,
+  "bytes": 85098
+ },
+ {
+  "endpoint": "papers directory",
+  "path": "/papers",
+  "first_ms": 25.1,
+  "median_ms": 8.7,
+  "p95_ms": 25.1,
+  "bytes": 8238
+ },
+ {
+  "endpoint": "author page",
+  "path": "/authors/39",
+  "first_ms": 31.6,
+  "median_ms": 10.1,
+  "p95_ms": 31.6,
+  "bytes": 1325
+ },
+ {
+  "endpoint": "author influence",
+  "path": "/authors/39/influence",
+  "first_ms": 26.8,
+  "median_ms": 5.4,
+  "p95_ms": 26.8,
+  "bytes": 657
+ },
+ {
+  "endpoint": "F2 communities (scoped)",
+  "path": "/communities",
+  "first_ms": 65.4,
+  "median_ms": 51.2,
+  "p95_ms": 65.4,
+  "bytes": 3175
+ },
+ {
+  "endpoint": "F2 community page",
+  "path": "/communities/1",
+  "first_ms": 33.2,
+  "median_ms": 15.1,
+  "p95_ms": 33.2,
+  "bytes": 2363
+ },
+ {
+  "endpoint": "F2 community graph",
+  "path": "/communities/graph",
+  "first_ms": 269.0,
+  "median_ms": 244.0,
+  "p95_ms": 269.0,
+  "bytes": 138958
+ },
+ {
+  "endpoint": "F3 trending",
+  "path": "/topics/trending",
+  "first_ms": 31.6,
+  "median_ms": 15.1,
+  "p95_ms": 31.6,
+  "bytes": 4224
+ },
+ {
+  "endpoint": "F3 topic trend",
+  "path": "/topics/1/trend",
+  "first_ms": 26.3,
+  "median_ms": 5.9,
+  "p95_ms": 26.3,
+  "bytes": 1351
+ },
+ {
+  "endpoint": "F4 bridges (scoped)",
+  "path": "/authors/bridges",
+  "first_ms": 64.9,
+  "median_ms": 49.0,
+  "p95_ms": 64.9,
+  "bytes": 15520
+ },
+ {
+  "endpoint": "F5 converging pairs",
+  "path": "/topics/converging",
+  "first_ms": 30.0,
+  "median_ms": 7.2,
+  "p95_ms": 30.0,
+  "bytes": 5400
+ },
+ {
+  "endpoint": "F5 pair trend",
+  "path": "/topics/pairs/1/306/trend",
+  "first_ms": 29.7,
+  "median_ms": 15.8,
+  "p95_ms": 29.7,
+  "bytes": 804
+ },
+ {
+  "endpoint": "institution page",
+  "path": "/institutions/8",
+  "first_ms": 32.6,
+  "median_ms": 30.2,
+  "p95_ms": 32.6,
+  "bytes": 1044
+ },
+ {
+  "endpoint": "institution network",
+  "path": "/institutions/network",
+  "first_ms": 35.4,
+  "median_ms": 16.4,
+  "p95_ms": 35.4,
+  "bytes": 4542
+ },
+ {
+  "endpoint": "top institutions by country",
+  "path": "/institutions/countries",
+  "first_ms": 144.3,
+  "median_ms": 128.6,
+  "p95_ms": 144.3,
+  "bytes": 800
+ },
+ {
+  "endpoint": "methods & runs",
+  "path": "/meta/runs",
+  "first_ms": 33.3,
+  "median_ms": 29.9,
+  "p95_ms": 33.3,
+  "bytes": 4636
+ },
+ {
+  "endpoint": "S9 topic authors 2023-2025",
+  "path": "/queries/topic-authors",
+  "first_ms": 35.2,
+  "median_ms": 13.4,
+  "p95_ms": 35.2,
+  "bytes": 3617
+ },
+ {
+  "endpoint": "S9 cross-community citations",
+  "path": "/queries/cross-community-citations",
+  "first_ms": 265.2,
+  "median_ms": 62.9,
+  "p95_ms": 265.2,
+  "bytes": 10444
+ },
+ {
+  "endpoint": "S9 topic-year counts",
+  "path": "/queries/topic-year-counts",
+  "first_ms": 31.1,
+  "median_ms": 6.6,
+  "p95_ms": 31.1,
+  "bytes": 435
+ },
+ {
+  "endpoint": "S9 institutions across 2 topics",
+  "path": "/queries/institution-topic-collaboration",
+  "first_ms": 32.6,
+  "median_ms": 11.8,
+  "p95_ms": 32.6,
+  "bytes": 6208
+ }
+]

@@ -1,0 +1,210 @@
+[
+ {
+  "endpoint": "F1 search overview",
+  "path": "/search/overview",
+  "first_ms": 36.4,
+  "median_ms": 22.3,
+  "p95_ms": 36.4,
+  "bytes": 3775
+ },
+ {
+  "endpoint": "F1 search papers (relevance)",
+  "path": "/search/papers",
+  "first_ms": 31.4,
+  "median_ms": 13.2,
+  "p95_ms": 31.4,
+  "bytes": 7985
+ },
+ {
+  "endpoint": "F1 search papers (citations)",
+  "path": "/search/papers",
+  "first_ms": 35.3,
+  "median_ms": 14.8,
+  "p95_ms": 35.3,
+  "bytes": 8197
+ },
+ {
+  "endpoint": "F1/F6 citation network",
+  "path": "/search/citation-network",
+  "first_ms": 234.7,
+  "median_ms": 30.5,
+  "p95_ms": 234.7,
+  "bytes": 31180
+ },
+ {
+  "endpoint": "paper page",
+  "path": "/papers/3",
+  "first_ms": 24.7,
+  "median_ms": 7.8,
+  "p95_ms": 24.7,
+  "bytes": 2320
+ },
+ {
+  "endpoint": "paper cited-by",
+  "path": "/papers/3/citations",
+  "first_ms": 30.6,
+  "median_ms": 6.8,
+  "p95_ms": 30.6,
+  "bytes": 3707
+ },
+ {
+  "endpoint": "recursive citation chain d=5",
+  "path": "/papers/3/citation-chain",
+  "first_ms": 30.9,
+  "median_ms": 20.2,
+  "p95_ms": 30.9,
+  "bytes": 18578
+ },
+ {
+  "endpoint": "papers directory",
+  "path": "/papers",
+  "first_ms": 29.8,
+  "median_ms": 6.1,
+  "p95_ms": 29.8,
+  "bytes": 8222
+ },
+ {
+  "endpoint": "author page",
+  "path": "/authors/25",
+  "first_ms": 31.7,
+  "median_ms": 6.5,
+  "p95_ms": 31.7,
+  "bytes": 1245
+ },
+ {
+  "endpoint": "author influence",
+  "path": "/authors/25/influence",
+  "first_ms": 26.4,
+  "median_ms": 12.0,
+  "p95_ms": 26.4,
+  "bytes": 658
+ },
+ {
+  "endpoint": "F2 communities (scoped)",
+  "path": "/communities",
+  "first_ms": 20.0,
+  "median_ms": 16.3,
+  "p95_ms": 20.0,
+  "bytes": 3132
+ },
+ {
+  "endpoint": "F2 community page",
+  "path": "/communities/1",
+  "first_ms": 31.8,
+  "median_ms": 23.0,
+  "p95_ms": 31.8,
+  "bytes": 2344
+ },
+ {
+  "endpoint": "F2 community graph",
+  "path": "/communities/graph",
+  "first_ms": 69.4,
+  "median_ms": 44.8,
+  "p95_ms": 69.4,
+  "bytes": 134289
+ },
+ {
+  "endpoint": "F3 trending",
+  "path": "/topics/trending",
+  "first_ms": 36.2,
+  "median_ms": 7.1,
+  "p95_ms": 36.2,
+  "bytes": 2185
+ },
+ {
+  "endpoint": "F3 topic trend",
+  "path": "/topics/3/trend",
+  "first_ms": 27.3,
+  "median_ms": 14.4,
+  "p95_ms": 27.3,
+  "bytes": 1320
+ },
+ {
+  "endpoint": "F4 bridges (scoped)",
+  "path": "/authors/bridges",
+  "first_ms": 38.6,
+  "median_ms": 13.1,
+  "p95_ms": 38.6,
+  "bytes": 15388
+ },
+ {
+  "endpoint": "F5 converging pairs",
+  "path": "/topics/converging",
+  "first_ms": 20.4,
+  "median_ms": 6.5,
+  "p95_ms": 20.4,
+  "bytes": 5067
+ },
+ {
+  "endpoint": "F5 pair trend",
+  "path": "/topics/pairs/3/11/trend",
+  "first_ms": 29.7,
+  "median_ms": 6.5,
+  "p95_ms": 29.7,
+  "bytes": 795
+ },
+ {
+  "endpoint": "institution page",
+  "path": "/institutions/8",
+  "first_ms": 34.0,
+  "median_ms": 12.8,
+  "p95_ms": 34.0,
+  "bytes": 989
+ },
+ {
+  "endpoint": "institution network",
+  "path": "/institutions/network",
+  "first_ms": 30.1,
+  "median_ms": 16.0,
+  "p95_ms": 30.1,
+  "bytes": 4375
+ },
+ {
+  "endpoint": "top institutions by country",
+  "path": "/institutions/countries",
+  "first_ms": 31.7,
+  "median_ms": 8.8,
+  "p95_ms": 31.7,
+  "bytes": 786
+ },
+ {
+  "endpoint": "methods & runs",
+  "path": "/meta/runs",
+  "first_ms": 33.5,
+  "median_ms": 22.1,
+  "p95_ms": 33.5,
+  "bytes": 4490
+ },
+ {
+  "endpoint": "S9 topic authors 2023-2025",
+  "path": "/queries/topic-authors",
+  "first_ms": 31.1,
+  "median_ms": 16.2,
+  "p95_ms": 31.1,
+  "bytes": 3523
+ },
+ {
+  "endpoint": "S9 cross-community citations",
+  "path": "/queries/cross-community-citations",
+  "first_ms": 34.2,
+  "median_ms": 22.7,
+  "p95_ms": 34.2,
+  "bytes": 10530
+ },
+ {
+  "endpoint": "S9 topic-year counts",
+  "path": "/queries/topic-year-counts",
+  "first_ms": 26.7,
+  "median_ms": 5.5,
+  "p95_ms": 26.7,
+  "bytes": 413
+ },
+ {
+  "endpoint": "S9 institutions across 2 topics",
+  "path": "/queries/institution-topic-collaboration",
+  "first_ms": 33.2,
+  "median_ms": 11.8,
+  "p95_ms": 33.2,
+  "bytes": 6167
+ }
+]

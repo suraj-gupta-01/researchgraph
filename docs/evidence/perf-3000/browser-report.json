@@ -1,0 +1,508 @@
+[
+  {
+    "route": "sign-in",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "cspViolations": [],
+    "loadMs": 0,
+    "axe": []
+  },
+  {
+    "route": "home",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 888,
+    "axe": []
+  },
+  {
+    "route": "explore-landing",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 874,
+    "axe": []
+  },
+  {
+    "route": "explore",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 989,
+    "axe": []
+  },
+  {
+    "route": "citation-network",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 1209,
+    "axe": []
+  },
+  {
+    "route": "paper",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 917,
+    "axe": []
+  },
+  {
+    "route": "papers",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 871,
+    "axe": []
+  },
+  {
+    "route": "authors",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 868,
+    "axe": []
+  },
+  {
+    "route": "author",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 886,
+    "axe": []
+  },
+  {
+    "route": "institutions",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 892,
+    "axe": []
+  },
+  {
+    "route": "institution",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 886,
+    "axe": []
+  },
+  {
+    "route": "institution-network",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 869,
+    "axe": []
+  },
+  {
+    "route": "top-institutions",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 979,
+    "axe": []
+  },
+  {
+    "route": "venues",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 877,
+    "axe": []
+  },
+  {
+    "route": "venue",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 853,
+    "axe": []
+  },
+  {
+    "route": "topics",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 871,
+    "axe": []
+  },
+  {
+    "route": "topic",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 873,
+    "axe": []
+  },
+  {
+    "route": "trends",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 881,
+    "axe": []
+  },
+  {
+    "route": "communities",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 905,
+    "axe": []
+  },
+  {
+    "route": "community",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 863,
+    "axe": []
+  },
+  {
+    "route": "community-graph",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 1047,
+    "axe": []
+  },
+  {
+    "route": "bridges",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 887,
+    "axe": []
+  },
+  {
+    "route": "connections",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 928,
+    "axe": []
+  },
+  {
+    "route": "methods",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 875,
+    "axe": []
+  },
+  {
+    "route": "query-lab",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 882,
+    "axe": []
+  },
+  {
+    "route": "query-lab-chain",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 895,
+    "axe": []
+  },
+  {
+    "route": "accounts",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 868,
+    "axe": []
+  },
+  {
+    "route": "not-found",
+    "viewport": "1440",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 854,
+    "axe": []
+  },
+  {
+    "route": "sign-in",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 0,
+    "axe": []
+  },
+  {
+    "route": "home",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 871,
+    "axe": []
+  },
+  {
+    "route": "explore-landing",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 880,
+    "axe": []
+  },
+  {
+    "route": "explore",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 972,
+    "axe": []
+  },
+  {
+    "route": "citation-network",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 1247,
+    "axe": []
+  },
+  {
+    "route": "paper",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 891,
+    "axe": []
+  },
+  {
+    "route": "papers",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 883,
+    "axe": []
+  },
+  {
+    "route": "authors",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 882,
+    "axe": []
+  },
+  {
+    "route": "author",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 884,
+    "axe": []
+  },
+  {
+    "route": "institutions",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 881,
+    "axe": []
+  },
+  {
+    "route": "institution",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 882,
+    "axe": []
+  },
+  {
+    "route": "institution-network",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 869,
+    "axe": []
+  },
+  {
+    "route": "top-institutions",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 980,
+    "axe": []
+  },
+  {
+    "route": "venues",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 864,
+    "axe": []
+  },
+  {
+    "route": "venue",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 848,
+    "axe": []
+  },
+  {
+    "route": "topics",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 859,
+    "axe": []
+  },
+  {
+    "route": "topic",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 867,
+    "axe": []
+  },
+  {
+    "route": "trends",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 884,
+    "axe": []
+  },
+  {
+    "route": "communities",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 902,
+    "axe": []
+  },
+  {
+    "route": "community",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 864,
+    "axe": []
+  },
+  {
+    "route": "community-graph",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 1041,
+    "axe": []
+  },
+  {
+    "route": "bridges",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 867,
+    "axe": []
+  },
+  {
+    "route": "connections",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 881,
+    "axe": []
+  },
+  {
+    "route": "methods",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 874,
+    "axe": []
+  },
+  {
+    "route": "query-lab",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 891,
+    "axe": []
+  },
+  {
+    "route": "query-lab-chain",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 866,
+    "axe": []
+  },
+  {
+    "route": "accounts",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 853,
+    "axe": []
+  },
+  {
+    "route": "not-found",
+    "viewport": "390",
+    "overflowPx": 0,
+    "consoleErrors": [],
+    "cspViolations": [],
+    "loadMs": 859,
+    "axe": []
+  }
+]

@@ -1,0 +1,117 @@
+# One-command demo: `docker compose up --build` from an empty volume gives a
+# seeded, signed-in-able dashboard at http://localhost:5173 (production build).
+# For hot-reload development add the override:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: researchgraph-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-researchgraph}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-researchgraph}
+      POSTGRES_DB: ${POSTGRES_DB:-researchgraph}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ./database/migrations/02_m2.sql:/docker-entrypoint-initdb.d/02_m2.sql:ro
+      - ./database/migrations/03_m4.sql:/docker-entrypoint-initdb.d/03_m4.sql:ro
+      - ./database/migrations/04_m4_part3.sql:/docker-entrypoint-initdb.d/04_m4_part3.sql:ro
+      - ./database/migrations/05_m4_part4.sql:/docker-entrypoint-initdb.d/05_m4_part4.sql:ro
+      - ./database/migrations/06_query_lab.sql:/docker-entrypoint-initdb.d/06_query_lab.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-researchgraph}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mongo:
+    image: mongo:7
+    container_name: researchgraph-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:-researchgraph}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:-researchgraph}
+      MONGO_INITDB_DATABASE: ${MONGO_DB:-researchgraph}
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    volumes:
+      - mongodata:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: researchgraph-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongo:
+        condition: service_healthy
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER:-researchgraph}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-researchgraph}
+      POSTGRES_DB: ${POSTGRES_DB:-researchgraph}
+      MONGO_HOST: mongo
+      MONGO_PORT: 27017
+      MONGO_USER: ${MONGO_USER:-researchgraph}
+      MONGO_PASSWORD: ${MONGO_PASSWORD:-researchgraph}
+      MONGO_DB: ${MONGO_DB:-researchgraph}
+      SEMANTIC_SCHOLAR_API_KEY: ${SEMANTIC_SCHOLAR_API_KEY:-}
+      OPENALEX_MAILTO: ${OPENALEX_MAILTO:-}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+      # G7 sign-in. Demo accounts only -- set your own in .env.
+      AUTH_ENABLED: ${AUTH_ENABLED:-true}
+      AUTH_USERS: ${AUTH_USERS:-viewer:viewer-demo:viewer,analyst:analyst-demo:analyst,admin:admin-demo:admin}
+      SESSION_SECRET: ${SESSION_SECRET:-}
+      SESSION_TTL_MINUTES: ${SESSION_TTL_MINUTES:-480}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      # Load the synthetic dev corpus when the database is empty (app/bootstrap.py).
+      SEED_ON_EMPTY: ${SEED_ON_EMPTY:-true}
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    volumes:
+      # The query-lab migration, so bootstrap can upgrade a volume created
+      # before it existed.
+      - ./database:/database:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4).status == 200 else 1)"]
+      interval: 10s
+      timeout: 5s
+      start_period: 180s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: prod
+      args:
+        # Address the *browser* uses to reach the API (not the compose-internal
+        # name). Baked into the production bundle at build time.
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8000}
+    container_name: researchgraph-frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      # Fills the CSP's connect-src (frontend/nginx/default.conf.template).
+      API_ORIGIN: ${VITE_API_URL:-http://localhost:8000}
+    ports:
+      - "${FRONTEND_PORT:-5173}:80"
+
+volumes:
+  pgdata:
+  mongodata:

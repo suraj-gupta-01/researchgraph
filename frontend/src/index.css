@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ResearchGraph design tokens — references/design-system.md §2.
+   One place, so a palette change is one edit. */
+@theme {
+  --font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4 Variable", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Surfaces and ink */
+  --color-paper: #f6f7f9;
+  --color-sheet: #ffffff;
+  --color-rule: #d8dde3;
+  --color-rule-strong: #b5bdc7;
+  --color-ink: #18232f;
+  --color-muted: #55626f;
+  --color-faint: #636f7c; /* 4.78:1 on --color-paper, 5.13:1 on --color-sheet (WCAG AA body text) */
+
+  /* Action and selection */
+  --color-accent: #1d4f91;
+  --color-accent-soft: #e3ecf7;
+  --color-warn: #8a5a00;
+  --color-warn-soft: #fbf1d9;
+  --color-bar: #b9c1cf;
+
+  /* Trend semantics — always paired with a glyph and a text label */
+  --color-trend-emerging: #b5490b;
+  --color-trend-declining: #6c5b9e;
+  --color-trend-converging: #1f7a66;
+  --color-trend-stable: #6b7785;
+
+  /* Community categories, in order; unassigned authors use --color-community-none */
+  --color-community-1: #0072b2;
+  --color-community-2: #d55e00;
+  --color-community-3: #009e73;
+  --color-community-4: #cc79a7;
+  --color-community-5: #e69f00;
+  --color-community-6: #56b4e9;
+  --color-community-7: #8b6f47;
+  --color-community-8: #5f5aa2;
+  --color-community-none: #b5bdc7;
+
+  /* Sequential ramp endpoints (scores) and diverging ramp (growth) */
+  --color-ramp-low: #e3ecf7;
+  --color-ramp-high: #1d4f91;
+  --color-diverge-neg: #6c5b9e;
+  --color-diverge-mid: #f6f7f9;
+  --color-diverge-pos: #b5490b;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 1;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+table {
+  font-feature-settings: "tnum" 1;
+}
+code,
+.font-mono {
+  font-feature-settings: normal;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Community map: keep the focus ring for keyboard users only (a mouse click
+   on an SVG group otherwise leaves a box around it). */
+.cmap-node:focus { outline: none; }
+.cmap-node:focus-visible circle:last-of-type { stroke: var(--color-accent); stroke-width: 2.5px; }
